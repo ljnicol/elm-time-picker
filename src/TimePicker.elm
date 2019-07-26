@@ -493,7 +493,7 @@ view settings (TimePicker model) =
 
         clearButton =
             model.value
-                |> Maybe.map (\_ -> [ a ([ class (cssPrefix ++ "panel-clear-btn"), href "#", onWithoutLosingFocus "mousedown" NoOp, onWithoutLosingFocus "mouseup" NoOp ] ++ optionalClear) [] ])
+                |> Maybe.map (\_ -> [ a ([ class (cssPrefix ++ "panel-clear-btn"), onWithoutLosingFocus "mousedown" NoOp, onWithoutLosingFocus "mouseup" NoOp ] ++ optionalClear) [] ])
                 |> Maybe.withDefault []
     in
     div [ classList [ ( cssPrefix ++ "container", True ), ( cssPrefix ++ "active", model.open ) ] ]
